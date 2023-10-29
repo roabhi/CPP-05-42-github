@@ -6,7 +6,7 @@
 //   By: rabril-h <rabril-h@student.42barc...>      +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2023/10/29 17:28:02 by rabril-h          #+#    #+#             //
-//   Updated: 2023/10/29 18:21:41 by rabril-h         ###   ########.fr       //
+//   Updated: 2023/10/29 18:48:33 by rabril-h         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -18,8 +18,8 @@
 # define GRADE_MIN 150
 # define GRADE_MAX 1
 # define GRADE_AVG ((GRADE_MAX - GRADE_MIN) / 2 + GRADE_MIN)
-# define EXC_GTL "Exception. Grade Too Low for "
-# define EXC_GTH "Exception. Grade Too HIGH for "
+# define EXC_GTL "Exception. Grade Too LOW "
+# define EXC_GTH "Exception. Grade Too HIGH "
 
 class Bureaucrat
 {
