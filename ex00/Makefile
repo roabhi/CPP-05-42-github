@@ -6,7 +6,7 @@
 #    By: rabril-h <rabril-h@student.42barc...>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/29 16:46:26 by rabril-h          #+#    #+#              #
-#    Updated: 2023/10/29 16:55:11 by rabril-h         ###   ########.fr        #
+#    Updated: 2023/10/29 18:44:12 by rabril-h         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -18,7 +18,7 @@ CC = c++
 CFLAGS = -Werror -Wextra -Wall -std=c++98 #-g -fsanitize=address
 
 
-FILES = main #Bureaucrat
+FILES = main ./classes/Bureaucrat
 
 SRC = $(addsuffix .cpp, $(FILES))
 
@@ -35,7 +35,7 @@ DEP = $(addsuffix .d, $(basename $(OBJ)))
 all:
 	@$(MAKE) $(NAME) --no-print-directory
 
-$(NAME):: $(OBJ)
+$(NAME):: $(OBJ) Makefile
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
