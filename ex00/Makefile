@@ -15,7 +15,7 @@ NAME = Bureaucrat
 
 RM = rm -f
 CC = c++
-CFLAGS = -Werror -Wextra -Wall -std=c++98 #-g -fsanitize=address
+CFLAGS = -Werror -Wextra -Wall -std=c++98 -g -fsanitize=address
 
 
 FILES = main ./classes/Bureaucrat
