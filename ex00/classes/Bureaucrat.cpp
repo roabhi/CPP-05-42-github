@@ -83,7 +83,6 @@ void Bureaucrat::downGrade(int grade)
 	check_grade_exceptions();
 }
 
-
 const std::string Bureaucrat::getName() const
 {
 	return (this->_name);

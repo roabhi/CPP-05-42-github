@@ -94,6 +94,24 @@ int Bureaucrat::getGrade() const
 	return (this->_grade);
 }
 
+void		Bureaucrat::signForm(Form &form) const
+{
+	bool	auxSigned = form.getFormSigned();
+
+	try
+	{
+		form.beSigned(*this);
+		if (auxSigned == false)
+			std::cout << this->_name << " signed form " << form.getName() << std::endl;
+		else
+			std::cout << this->_name << " not signed " << form.getName() << " beacouse it was signed." << std::endl;
+	}
+	catch (std::out_of_range& e)
+	{
+		std::cout << this->_name << " failed to sign " << form.getName() << " due to " << e.what() << std::endl;
+	}
+}
+
 void Bureaucrat::check_grade_exceptions()
 {
 	if (this->_grade < 1)

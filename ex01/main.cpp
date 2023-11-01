@@ -116,19 +116,19 @@ void	testsFormConstructor( void )
 	//	Both: Out of range Grades in Form constructor
 
 	doFormConstructorTest( 5, "too low both signGrade and execGrade", \
-							MIN_GRADE + 1, MIN_GRADE + 1 );
+							GRADE_MIN + 1, GRADE_MIN + 1 );
 	doFormConstructorTest( 6, "too high both signGrade and execGrade", \
-							MAX_GRADE - 1, MAX_GRADE - 1 );
+							GRADE_MAX - 1, GRADE_MAX - 1 );
 	doFormConstructorTest( 7, "too high signGrade and too low execGrade", \
-							MAX_GRADE - 1, MIN_GRADE + 1  );
+							GRADE_MAX - 1, GRADE_MIN + 1  );
 	doFormConstructorTest( 8, "too low signGrade and too high execGrade", \
-							MIN_GRADE + 1, MAX_GRADE - 1  );
+							GRADE_MIN + 1, GRADE_MAX - 1  );
 }
 
 void	testsFormGetters( void )
 {
-	Form	form( "Juan's Form", MID_GRADE, MIN_GRADE );
-	Bureaucrat	Juan( "Juan", MID_GRADE );
+	Form	form( "Juan's Form", GRADE_AVG, GRADE_MIN );
+	Bureaucrat	Juan( "Juan", GRADE_AVG );
 
 	//Getters Tests
 	
@@ -157,12 +157,12 @@ void	testsFormGetters( void )
 
 void	testsBureaucratSignForm( void )
 {
-	Form		formMinGrade( "Juan's form", MIN_GRADE, MIN_GRADE );
-	Form		formMidGrade( "Juan's form", MID_GRADE, MID_GRADE );
-	Form		formMaxGrade( "Juan's form", MAX_GRADE, MAX_GRADE );
-	Bureaucrat	JuanMinGrade( "Juan", MIN_GRADE );
-	Bureaucrat	JuanMidGrade( "Juan", MID_GRADE );
-	Bureaucrat	JuanMaxGrade( "Juan", MAX_GRADE );
+	Form		formMinGrade( "Juan's form", GRADE_MIN, GRADE_MIN );
+	Form		formMidGrade( "Juan's form", GRADE_AVG, GRADE_AVG );
+	Form		formMaxGrade( "Juan's form", GRADE_MAX, GRADE_MAX );
+	Bureaucrat	JuanMinGrade( "Juan", GRADE_MIN );
+	Bureaucrat	JuanMidGrade( "Juan", GRADE_AVG );
+	Bureaucrat	JuanMaxGrade( "Juan", GRADE_MAX );
 
 	//Method Tests
 	

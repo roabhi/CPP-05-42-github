@@ -15,11 +15,15 @@
 
 # include <iostream>
 # include <stdexcept>
-# define MIN_GRADE 150
+# define GRADE_MIN 150
 # define GRADE_MAX 1
 # define GRADE_AVG ((GRADE_MAX - GRADE_MIN) / 2 + GRADE_MIN)
 # define EXC_GTL "Exception. Grade Too LOW "
 # define EXC_GTH "Exception. Grade Too HIGH "
+
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -38,6 +42,7 @@ public:
 
 	const std::string   getName() const;
 	int                 getGrade() const;
+	void								signForm(Form &form) const;
 
 	//classes
 

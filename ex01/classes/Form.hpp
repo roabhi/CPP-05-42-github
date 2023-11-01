@@ -13,11 +13,6 @@
 #ifndef FORM_HPP
 # define FORM_HPP
 
-# include <iostream>
-# include <stdexcept>
-# define GRADE_MIN 150
-# define GRADE_MAX 1
-# define GRADE_AVG ((GRADE_MAX - GRADE_MIN) / 2 + GRADE_AVG)
 # include "Bureaucrat.hpp"
 
 class Bureaucrat;
